@@ -13,6 +13,7 @@
 		3EAE6C2A1C7A4F0E00F0EDB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EAE6C291C7A4F0E00F0EDB8 /* Assets.xcassets */; };
 		3EAE6C2D1C7A4F0E00F0EDB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EAE6C2B1C7A4F0E00F0EDB8 /* LaunchScreen.storyboard */; };
 		3EAE6C381C7A4F0E00F0EDB8 /* CLTypingLabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAE6C371C7A4F0E00F0EDB8 /* CLTypingLabelTests.swift */; };
+		3EAE6C431C7A4F4D00F0EDB8 /* CLTypingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAE6C421C7A4F4D00F0EDB8 /* CLTypingLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,15 +28,16 @@
 
 /* Begin PBXFileReference section */
 		3EAE6C1F1C7A4F0E00F0EDB8 /* CLTypingLabel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CLTypingLabel.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3EAE6C221C7A4F0E00F0EDB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3EAE6C241C7A4F0E00F0EDB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3EAE6C221C7A4F0E00F0EDB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = CLTypingLabel/AppDelegate.swift; sourceTree = "<group>"; };
+		3EAE6C241C7A4F0E00F0EDB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = CLTypingLabel/ViewController.swift; sourceTree = "<group>"; };
 		3EAE6C271C7A4F0E00F0EDB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3EAE6C291C7A4F0E00F0EDB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3EAE6C291C7A4F0E00F0EDB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = CLTypingLabel/Assets.xcassets; sourceTree = "<group>"; };
 		3EAE6C2C1C7A4F0E00F0EDB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		3EAE6C2E1C7A4F0E00F0EDB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3EAE6C2E1C7A4F0E00F0EDB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = CLTypingLabel/Info.plist; sourceTree = "<group>"; };
 		3EAE6C331C7A4F0E00F0EDB8 /* CLTypingLabelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CLTypingLabelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EAE6C371C7A4F0E00F0EDB8 /* CLTypingLabelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLTypingLabelTests.swift; sourceTree = "<group>"; };
 		3EAE6C391C7A4F0E00F0EDB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3EAE6C421C7A4F4D00F0EDB8 /* CLTypingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTypingLabel.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				3EAE6C211C7A4F0E00F0EDB8 /* CLTypingLabel */,
+				3EAE6C451C7A4F5500F0EDB8 /* DemoApp */,
 				3EAE6C361C7A4F0E00F0EDB8 /* CLTypingLabelTests */,
 				3EAE6C201C7A4F0E00F0EDB8 /* Products */,
 			);
@@ -77,12 +80,7 @@
 		3EAE6C211C7A4F0E00F0EDB8 /* CLTypingLabel */ = {
 			isa = PBXGroup;
 			children = (
-				3EAE6C221C7A4F0E00F0EDB8 /* AppDelegate.swift */,
-				3EAE6C241C7A4F0E00F0EDB8 /* ViewController.swift */,
-				3EAE6C261C7A4F0E00F0EDB8 /* Main.storyboard */,
-				3EAE6C291C7A4F0E00F0EDB8 /* Assets.xcassets */,
-				3EAE6C2B1C7A4F0E00F0EDB8 /* LaunchScreen.storyboard */,
-				3EAE6C2E1C7A4F0E00F0EDB8 /* Info.plist */,
+				3EAE6C421C7A4F4D00F0EDB8 /* CLTypingLabel.swift */,
 			);
 			path = CLTypingLabel;
 			sourceTree = "<group>";
@@ -94,6 +92,19 @@
 				3EAE6C391C7A4F0E00F0EDB8 /* Info.plist */,
 			);
 			path = CLTypingLabelTests;
+			sourceTree = "<group>";
+		};
+		3EAE6C451C7A4F5500F0EDB8 /* DemoApp */ = {
+			isa = PBXGroup;
+			children = (
+				3EAE6C221C7A4F0E00F0EDB8 /* AppDelegate.swift */,
+				3EAE6C241C7A4F0E00F0EDB8 /* ViewController.swift */,
+				3EAE6C261C7A4F0E00F0EDB8 /* Main.storyboard */,
+				3EAE6C291C7A4F0E00F0EDB8 /* Assets.xcassets */,
+				3EAE6C2B1C7A4F0E00F0EDB8 /* LaunchScreen.storyboard */,
+				3EAE6C2E1C7A4F0E00F0EDB8 /* Info.plist */,
+			);
+			name = DemoApp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EAE6C431C7A4F4D00F0EDB8 /* CLTypingLabel.swift in Sources */,
 				3EAE6C251C7A4F0E00F0EDB8 /* ViewController.swift in Sources */,
 				3EAE6C231C7A4F0E00F0EDB8 /* AppDelegate.swift in Sources */,
 			);
@@ -227,6 +239,7 @@
 				3EAE6C271C7A4F0E00F0EDB8 /* Base */,
 			);
 			name = Main.storyboard;
+			path = CLTypingLabel;
 			sourceTree = "<group>";
 		};
 		3EAE6C2B1C7A4F0E00F0EDB8 /* LaunchScreen.storyboard */ = {
@@ -235,6 +248,7 @@
 				3EAE6C2C1C7A4F0E00F0EDB8 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = CLTypingLabel;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -388,6 +402,7 @@
 				3EAE6C3E1C7A4F0E00F0EDB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3EAE6C3F1C7A4F0E00F0EDB8 /* Build configuration list for PBXNativeTarget "CLTypingLabelTests" */ = {
 			isa = XCConfigurationList;
@@ -396,6 +411,7 @@
 				3EAE6C411C7A4F0E00F0EDB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
