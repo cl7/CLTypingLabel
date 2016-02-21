@@ -15,6 +15,16 @@ iOS/OSX UILabel with character by character typewriter like animation
 1. Change the class of a label from UILabel to CLTypingLabel;
 2. Programmatically set a new String to its text property at runtime, animation would be triggered automatically;
 
+## Sample Code
+```swift
+@IBOutlet weak var myTypeWriterLabel: CLTypingLabel!
+```
+At runtime:
+
+```swift
+        myTypeWriterLabel.charInterval = 0.08 //optional, default is 0.1
+        myTypeWriterLabel.text = "This is a demo of typing label animation..."
+```
 
 ## License
 
