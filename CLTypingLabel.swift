@@ -25,6 +25,11 @@
 //
 
 import UIKit
+/**
+Set text at runtime to trigger type animation.
+ 
+Set charInterval property for interval time between each character, default is 0.1
+*/
 
 @IBDesignable public class CLTypingLabel: UILabel
 
@@ -44,22 +49,24 @@ import UIKit
         {
             charInterval = -charInterval
         }
-        setTextWithTypeAnimation(newValue, characterInterval: Double(charInterval))
+        let val = newValue ?? ""
+        setTextWithTypingAnimation(val, charInterval)
         }
     }
     
-    private func setTextWithTypeAnimation(typedText: String, characterInterval: NSTimeInterval) {
+    private func setTextWithTypingAnimation(typedText: String, _ charInterval: NSTimeInterval)
+    {
         super.text = ""
         dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INTERACTIVE, 0))
             {
-            for character in typedText.characters
+            for char in typedText.characters
                 {
                 dispatch_async(dispatch_get_main_queue())
                     {
-                    super.text = super.text! + String(character)
+                    super.text = super.text! + String(char)
                     self.sizeToFit()
                     }
-                NSThread.sleepForTimeInterval(characterInterval)
+                NSThread.sleepForTimeInterval(charInterval)
             }
         }
     }
