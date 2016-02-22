@@ -6,6 +6,8 @@
 
 iOS/OSX UILabel with character by character typewriter like animation
 
+iOS/OSX上自带逐字打印动画效果的UILabel
+
 <img src="https://raw.githubusercontent.com/l800891/CLTypingLabel/master/Files/demogiff.gif" width=480>
 
 
