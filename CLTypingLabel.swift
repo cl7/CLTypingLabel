@@ -72,7 +72,7 @@ Call conitinueTyping() to continue paused animation;
     
     private var stoppedSubstring: String = String()
     
-    private var over: Bool = false
+    private var over: Bool = true
     
     /**
     Stop typing animation
@@ -91,10 +91,12 @@ Call conitinueTyping() to continue paused animation;
     {
         guard self.over == false else
         {
+            print("Animation is already over")
             return
         }
         guard self.stopped == true else
         {
+            print("Animation is not stopped")
             return
         }
         stopped = false
