@@ -34,9 +34,14 @@ Set charInterval property for interval time between each character, default is 0
 @IBDesignable public class CLTypingLabel: UILabel
 
 {
-
+    /**
+     Set interval time between each characters
+     */
     @IBInspectable public var charInterval: Double = 0.1
     
+    /**
+     Set text immediately trigger animation
+     */
     override public var text: String! {
         
     get
@@ -49,18 +54,59 @@ Set charInterval property for interval time between each character, default is 0
         {
             charInterval = -charInterval
         }
+        stopped = false
+        stoppedSubstring = String()
+        over = false
         let val = newValue ?? ""
-        setTextWithTypingAnimation(val, charInterval)
+        setTextWithTypingAnimation(val, charInterval, true)
         }
     }
     
-    private func setTextWithTypingAnimation(typedText: String, _ charInterval: NSTimeInterval)
+    private var stopped: Bool = false
+    
+    private var stoppedSubstring: String = String()
+    
+    private var over: Bool = false
+    
+    /**
+    Stop typing animation
+    */
+    public func stopTyping()
     {
+        stopped = true
+    }
+    
+    /**
+     Continue typing animation
+    */
+    public func continueTyping()
+    {
+        guard self.over == false else
+        {
+            return
+        }
+        guard self.stopped == true else
+        {
+            return
+        }
+        stopped = false
+        setTextWithTypingAnimation(self.stoppedSubstring, charInterval, false)
+    }
+    
+    private func setTextWithTypingAnimation(typedText: String, _ charInterval: NSTimeInterval, _ initial: Bool)
+    {
+        if initial == true
+        {
         super.text = ""
+        }
         dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INTERACTIVE, 0))
             {
-            for char in typedText.characters
+            for (index,char) in typedText.characters.enumerate()
                 {
+                    guard self.stopped == false else{
+                        self.stoppedSubstring = typedText.substringFromIndex(typedText.startIndex.advancedBy(index))
+                        return
+                    }
                 dispatch_async(dispatch_get_main_queue())
                     {
                     super.text = super.text! + String(char)
@@ -68,6 +114,8 @@ Set charInterval property for interval time between each character, default is 0
                     }
                 NSThread.sleepForTimeInterval(charInterval)
             }
+            self.over = true
+            self.stopped = false
         }
     }
 }

@@ -23,5 +23,15 @@ class ViewController: UIViewController {
         demoLabel.text = "This is a demo of a typing label animation..."
     }
 
+    @IBAction func stopTapped(sender: AnyObject) {
+        demoLabel.stopTyping()
+    }
+    @IBAction func continueTapped(sender: AnyObject) {
+        demoLabel.continueTyping()  
+    }
+    
+    @IBAction func restartTapped(sender: AnyObject) {
+        demoLabel.text = "This is a demo of a typing label animation..."
+    }
 }
 

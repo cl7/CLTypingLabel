@@ -29,11 +29,44 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JD4-gK-nzB">
+                                <rect key="frame" x="284" y="330" width="32" height="30"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleColor" red="0.0" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dqm-yt-qZx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0O-OI-3sW">
+                                <rect key="frame" x="269" y="370" width="62" height="30"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" red="0.0" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="continueTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UWC-OE-NOx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j93-Xl-MHo">
+                                <rect key="frame" x="275" y="410" width="50" height="30"/>
+                                <state key="normal" title="Restart">
+                                    <color key="titleColor" red="0.0" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="restartTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R4c-Cc-9ij"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="JD4-gK-nzB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FHA-fc-mO3"/>
+                            <constraint firstItem="e0O-OI-3sW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q0n-o0-Cbc"/>
                             <constraint firstItem="uRG-h2-Hik" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="asG-ch-3Ph"/>
+                            <constraint firstItem="j93-Xl-MHo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e4R-gb-D82"/>
+                            <constraint firstItem="JD4-gK-nzB" firstAttribute="top" secondItem="uRG-h2-Hik" secondAttribute="bottom" constant="30" id="i40-Jj-k3f"/>
+                            <constraint firstItem="j93-Xl-MHo" firstAttribute="top" secondItem="e0O-OI-3sW" secondAttribute="bottom" constant="10" id="iew-tX-PDT"/>
                             <constraint firstItem="uRG-h2-Hik" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qgL-Da-i34"/>
+                            <constraint firstItem="e0O-OI-3sW" firstAttribute="top" secondItem="JD4-gK-nzB" secondAttribute="bottom" constant="10" id="txk-Lu-KUu"/>
                         </constraints>
                     </view>
                     <connections>
