@@ -13,8 +13,10 @@ iOS/OSX上自带逐字打印动画效果的UILabel
 
 ## Usage
 
-0. Copy [CLTypingLabel.swift](https://github.com/l800891/CLTypingLabel/blob/master/CLTypingLabel.swift) to your project
+0. Copy [CLTypingLabel.swift](https://github.com/l800891/CLTypingLabel/blob/master/CLTypingLabel.swift) to your project;
 1. Change the class of a label from UILabel to CLTypingLabel;
+
+ <img src="https://raw.githubusercontent.com/l800891/CLTypingLabel/master/Files/UILabelShot.png" width=200>
 2. Programmatically set a new String to its text property at runtime, animation would be triggered automatically;
 
 ## Sample Code
