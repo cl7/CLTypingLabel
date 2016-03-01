@@ -25,10 +25,16 @@
 //
 
 import UIKit
+
 /**
-Set text at runtime to trigger type animation.
+Set text at runtime to trigger type animation;
  
-Set charInterval property for interval time between each character, default is 0.1
+Set charInterval property for interval time between each character, default is 0.1;
+ 
+Call pauseTyping() to pause animation;
+ 
+Call conitinueTyping() to continue paused animation;
+ 
 */
 
 @IBDesignable public class CLTypingLabel: UILabel
@@ -71,7 +77,8 @@ Set charInterval property for interval time between each character, default is 0
     /**
     Stop typing animation
     */
-    public func stopTyping()
+    
+    public func pauseTyping()
     {
         stopped = true
     }
@@ -79,6 +86,7 @@ Set charInterval property for interval time between each character, default is 0
     /**
      Continue typing animation
     */
+    
     public func continueTyping()
     {
         guard self.over == false else
@@ -103,7 +111,8 @@ Set charInterval property for interval time between each character, default is 0
             {
             for (index,char) in typedText.characters.enumerate()
                 {
-                    guard self.stopped == false else{
+                    guard self.stopped == false else
+                    {
                         self.stoppedSubstring = typedText.substringFromIndex(typedText.startIndex.advancedBy(index))
                         return
                     }

@@ -24,10 +24,10 @@ class ViewController: UIViewController {
     }
 
     @IBAction func stopTapped(sender: AnyObject) {
-        demoLabel.stopTyping()
+        demoLabel.pauseTyping()
     }
     @IBAction func continueTapped(sender: AnyObject) {
-        demoLabel.continueTyping()  
+        demoLabel.continueTyping()
     }
     
     @IBAction func restartTapped(sender: AnyObject) {
