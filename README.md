@@ -29,6 +29,11 @@ At runtime:
         myTypeWriterLabel.charInterval = 0.08 //optional, default is 0.1
         myTypeWriterLabel.text = "This is a demo of typing label animation..."
 ```
+Additionally, you can pause the typing animation at any time:
+```swift
+        myTypeWriterLabel.pauseTyping() //this will pause the typing animation
+        myTypeWriterLabel.continueTyping() //this will continue paused typing animation
+```
 
 ## License
 
