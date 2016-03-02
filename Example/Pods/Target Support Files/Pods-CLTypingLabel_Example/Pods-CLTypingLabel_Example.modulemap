@@ -1,0 +1,6 @@
+framework module Pods_CLTypingLabel_Example {
+  umbrella header "Pods-CLTypingLabel_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
