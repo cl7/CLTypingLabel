@@ -18,11 +18,6 @@ iOS/OSX上自带逐字打印动画效果的UILabel
 2. Add this line to your Podfile: `pod 'CLTypingLabel'`
 3. Install the pod: `pod install`
 
-### Direct Copy
-
-Copy [CLTypingLabel.swift](https://github.com/l800891/CLTypingLabel/blob/master/CLTypingLabel.swift) to your project;
-
-
 ## Usage
 
 1. Change the class of a label from UILabel to CLTypingLabel;
@@ -37,13 +32,16 @@ Copy [CLTypingLabel.swift](https://github.com/l800891/CLTypingLabel/blob/master/
 At runtime:
 
 ```swift
-        myTypeWriterLabel.charInterval = 0.08 //optional, default is 0.1
         myTypeWriterLabel.text = "This is a demo of typing label animation..."
 ```
 Additionally, you can pause the typing animation at any time:
 ```swift
         myTypeWriterLabel.pauseTyping() //this will pause the typing animation
         myTypeWriterLabel.continueTyping() //this will continue paused typing animation
+```
+Or customize time interval between each character:
+```swift
+        myTypeWriterLabel.charInterval = 0.08 //optional, default is 0.1
 ```
 
 ## License
