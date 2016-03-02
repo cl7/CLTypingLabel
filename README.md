@@ -25,23 +25,25 @@ iOS/OSX上自带逐字打印动画效果的UILabel
  <img src="https://raw.githubusercontent.com/l800891/CLTypingLabel/master/Files/UILabelShot.png" width=200>
 2. Programmatically set a new String to its text property at runtime, animation would be triggered automatically;
 
+
 ## Sample Code
+
 ```swift
 @IBOutlet weak var myTypeWriterLabel: CLTypingLabel!
 ```
 At runtime:
-
 ```swift
-        myTypeWriterLabel.text = "This is a demo of typing label animation..."
+myTypeWriterLabel.text = "This is a demo of typing label animation..."
+
 ```
 Additionally, you can pause the typing animation at any time:
 ```swift
-        myTypeWriterLabel.pauseTyping() //this will pause the typing animation
-        myTypeWriterLabel.continueTyping() //this will continue paused typing animation
+myTypeWriterLabel.pauseTyping() //this will pause the typing animation
+myTypeWriterLabel.continueTyping() //this will continue paused typing animation
 ```
-Or customize time interval between each character:
+And customize time interval between each character:
 ```swift
-        myTypeWriterLabel.charInterval = 0.08 //optional, default is 0.1
+myTypeWriterLabel.charInterval = 0.08 //optional, default is 0.1
 ```
 
 ## License

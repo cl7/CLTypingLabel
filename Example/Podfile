@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'CLTypingLabel_Example', :exclusive => true do
+  pod 'CLTypingLabel', :path => '../'
+end
+
+target 'CLTypingLabel_Tests', :exclusive => true do
+  pod 'CLTypingLabel', :path => '../'
+
+  
+end
