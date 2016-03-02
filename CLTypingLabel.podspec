@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "CLTypingLabel"
-  s.version          = "0.1.2"
+  s.version          = "0.1.3"
   s.summary          = "UILabel with character by character typing animation in swift iOS/OSX"
 
 # This description is used to generate tags and improve search results.
