@@ -12,7 +12,7 @@ iOS/OSX上自带逐字打印动画效果的UILabel
 
 ##Installation
 
-### [CocoaPods](http://cocoapods.org)
+### [CocoaPods](https://cocoapods.org/pods/CLTypingLabel)
 
 1. Install the latest release of CocoaPods: `gem install cocoapods`
 2. Add this line to your Podfile: `pod 'CLTypingLabel'`
