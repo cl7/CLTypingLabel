@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "CLTypingLabel"
-  s.version          = "0.1.0"
+  s.version          = "0.1.2"
   s.summary          = "UILabel with character by character typing animation in swift iOS/OSX"
 
 # This description is used to generate tags and improve search results.
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.homepage         = "https://github.com/l800891/CLTypingLabel"
   # s.screenshots     = "https://raw.githubusercontent.com/l800891/CLTypingLabel/master/Files/demogiff.gif"
   s.license          = 'MIT'
-  s.author           = { "Chenglin Liu" => "l800891@me.com" }
+  s.author           = { "Chenglin" => "l800891@me.com" }
   s.source           = { :git => "https://github.com/l800891/CLTypingLabel.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
