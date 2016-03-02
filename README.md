@@ -22,9 +22,9 @@ iOS/OSX上自带逐字打印动画效果的UILabel
 
 1. Change the class of a label from UILabel to CLTypingLabel;
 
-<img src="https://raw.githubusercontent.com/l800891/CLTypingLabel/master/Files/UILabelShot.png" width=200>
-
+ <img src="https://raw.githubusercontent.com/l800891/CLTypingLabel/master/Files/UILabelShot.png" width=200>
 2. Programmatically set a new String to its text property at runtime, animation would be triggered automatically;
+
 
 ## Sample Code
 
