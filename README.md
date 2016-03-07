@@ -31,12 +31,12 @@ iOS/OSX上自带逐字打印动画效果的UILabel
 ```swift
 @IBOutlet weak var myTypeWriterLabel: CLTypingLabel!
 ```
-At runtime:
+At runtime, set text of the label will trigger animation automatically:
 ```swift
 myTypeWriterLabel.text = "This is a demo of typing label animation..."
 
 ```
-Additionally, you can pause the typing animation at any time:
+You can pause the typing animation at any time:
 ```swift
 myTypeWriterLabel.pauseTyping() //this will pause the typing animation
 myTypeWriterLabel.continueTyping() //this will continue paused typing animation
