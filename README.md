@@ -2,7 +2,6 @@
 
 [![Build Status](https://travis-ci.org/l800891/CLTypingLabel.svg?branch=master)](https://travis-ci.org/l800891/CLTypingLabel)
 ![Language](https://img.shields.io/badge/iOS/OSX-Swift%202-orange.svg)
-[![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/l800891/LeetcodeInSwift.git)
 
 iOS/OSX UILabel with character by character typewriter like animation
 
