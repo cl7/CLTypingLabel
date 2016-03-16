@@ -3,11 +3,11 @@
 [![Build Status](https://travis-ci.org/l800891/CLTypingLabel.svg?branch=master)](https://travis-ci.org/l800891/CLTypingLabel)
 ![Language](https://img.shields.io/badge/iOS/OSX-Swift%202-orange.svg)
 
+<img src="https://raw.githubusercontent.com/l800891/CLTypingLabel/master/Files/demogiff.gif" width=300>
+
 A lightweight UILabel subclass with character by character typewriter like animation in Swift, super simple to use
 
 iOS/OSX上自带逐字打印动画效果的UILabel
-
-<img src="https://raw.githubusercontent.com/l800891/CLTypingLabel/master/Files/demogiff.gif" width=480>
 
 ##Installation
 
