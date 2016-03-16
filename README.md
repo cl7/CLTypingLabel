@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/l800891/CLTypingLabel.svg?branch=master)](https://travis-ci.org/l800891/CLTypingLabel)
 ![Language](https://img.shields.io/badge/iOS/OSX-Swift%202-orange.svg)
 
-iOS/OSX UILabel with character by character typewriter like animation
+A lightweight UILabel subclass with character by character typewriter like animation in Swift, super simple to use
 
 iOS/OSX上自带逐字打印动画效果的UILabel
 
@@ -16,6 +16,10 @@ iOS/OSX上自带逐字打印动画效果的UILabel
 1. Install the latest release of CocoaPods: `gem install cocoapods`
 2. Add this line to your Podfile: `pod 'CLTypingLabel'`
 3. Install the pod: `pod install`
+
+### Manual
+
+0. Copy and paste <a href="https://github.com/l800891/CLTypingLabel/blob/master/Pod/Classes/CLTypingLabel.swift">CLTypingLabel.swift</a> to your xcode project.
 
 ## Usage
 
