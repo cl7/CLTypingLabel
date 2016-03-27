@@ -52,6 +52,7 @@ enum CLTypingLabelKind {
      */
     @IBInspectable public var centerText: Bool = true
     
+    private var currentTypingID: Int = 0
     private var kind: CLTypingLabelKind = .Text
     private var typingStopped: Bool = false
     private var typingOver: Bool = true
@@ -68,6 +69,7 @@ enum CLTypingLabelKind {
                 charInterval = -charInterval
             }
             
+            currentTypingID += 1
             typingStopped = false
             typingOver = false
             stoppedSubstring = ""
@@ -89,6 +91,7 @@ enum CLTypingLabelKind {
                 charInterval = -charInterval
             }
             
+            currentTypingID += 1
             typingStopped = false
             typingOver = false
             stoppedSubstring = ""
@@ -141,8 +144,14 @@ enum CLTypingLabelKind {
             super.attributedText = NSAttributedString()
         }
         
+        let dispatchedTypingID = currentTypingID
+
         dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INTERACTIVE, 0)) {
             for (index, char) in typedAttributedText.string.characters.enumerate() {
+                guard self.currentTypingID == dispatchedTypingID else {
+                    return
+                }
+                
                 guard self.typingStopped == false else {
                     let position = typedAttributedText.string.startIndex.advancedBy(index)
                     self.stoppedSubstring = typedAttributedText.string.substringFromIndex(position)
@@ -170,8 +179,14 @@ enum CLTypingLabelKind {
             super.text = ""
         }
         
+        let dispatchedTypingID = currentTypingID
+        
         dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INTERACTIVE, 0)) {
             for (index, char) in typedText.characters.enumerate() {
+                guard self.currentTypingID == dispatchedTypingID else {
+                    return
+                }
+                
                 guard self.typingStopped == false else {
                     let position = typedText.startIndex.advancedBy(index)
                     self.stoppedSubstring = typedText.substringFromIndex(position)
