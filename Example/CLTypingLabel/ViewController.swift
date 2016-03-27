@@ -20,20 +20,11 @@ class ViewController: UIViewController {
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-    
-        // Text
-        // demoLabel.text = "This is a demo of a typing label animation..."
+        // Set Text
+         demoLabel.text = "This is a demo of a typing label animation..."
         
-        // Attributed Text
-        let attr = [
-            NSForegroundColorAttributeName: UIColor.blackColor(),
-            NSStrokeColorAttributeName: UIColor.redColor(),
-            NSStrokeWidthAttributeName: -3,
-        ]
-        
-        demoLabel.attributedText = NSAttributedString(string: "This is a demo of an attributed text typing label animation...", attributes: attr)
     }
-
+    
     @IBAction func stopTapped(sender: AnyObject) {
         demoLabel.pauseTyping()
     }
@@ -41,8 +32,25 @@ class ViewController: UIViewController {
         demoLabel.continueTyping()
     }
     
+    var showNoramlText = false
+    
     @IBAction func restartTapped(sender: AnyObject) {
+        if( showNoramlText)
+        //Plain Text Sample
+        {
         demoLabel.text = "This is a demo of a typing label animation..."
+        }
+        else
+        {
+        //Attributed Text Sample
+            let attr = [
+                NSForegroundColorAttributeName: UIColor.blackColor(),
+                NSStrokeColorAttributeName: UIColor.greenColor(),
+                NSStrokeWidthAttributeName: -3,
+            ]
+            demoLabel.attributedText = NSAttributedString(string: "This is an attributed text typing animation...", attributes: attr)
+        }
+        showNoramlText = !showNoramlText
     }
 }
 
