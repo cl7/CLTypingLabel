@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,9 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRG-h2-Hik" userLabel="DemoLabel" customClass="CLTypingLabel" customModule="CLTypingLabel">
-                                <rect key="frame" x="254" y="290" width="92" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRG-h2-Hik" userLabel="DemoLabel" customClass="CLTypingLabel" customModule="CLTypingLabel">
+                                <rect key="frame" x="200" y="284.5" width="200" height="32"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="AbV-J0-YqQ"/>
+                                    <constraint firstAttribute="width" constant="200" id="eqc-sH-vJq"/>
+                                    <constraint firstAttribute="height" constant="32" id="fEN-HG-Re9"/>
+                                </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="DemoLabel">
                                         <attributes>
@@ -34,10 +40,18 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="charInterval">
                                         <real key="value" value="0.5"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="centerText" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="AbV-J0-YqQ"/>
+                                        <exclude reference="eqc-sH-vJq"/>
+                                        <exclude reference="fEN-HG-Re9"/>
+                                    </mask>
+                                </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JD4-gK-nzB">
-                                <rect key="frame" x="260" y="341" width="80" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JD4-gK-nzB">
+                                <rect key="frame" x="260" y="346" width="80" height="30"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="UNd-cZ-dwn"/>
@@ -49,8 +63,8 @@
                                     <action selector="stopTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bTF-Jx-Emp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0O-OI-3sW">
-                                <rect key="frame" x="260" y="381" width="80" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0O-OI-3sW">
+                                <rect key="frame" x="260" y="386" width="80" height="30"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 <state key="normal" title="Continue">
                                     <color key="titleColor" red="0.0" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -59,8 +73,8 @@
                                     <action selector="continueTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J82-FJ-P3j"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j93-Xl-MHo">
-                                <rect key="frame" x="260" y="421" width="80" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j93-Xl-MHo">
+                                <rect key="frame" x="260" y="426" width="80" height="30"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 <state key="normal" title="Restart">
                                     <color key="titleColor" red="0.0" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -76,13 +90,21 @@
                             <constraint firstItem="e0O-OI-3sW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q0n-o0-Cbc"/>
                             <constraint firstItem="uRG-h2-Hik" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="asG-ch-3Ph"/>
                             <constraint firstItem="JD4-gK-nzB" firstAttribute="width" secondItem="e0O-OI-3sW" secondAttribute="width" id="c6H-IL-dhJ"/>
+                            <constraint firstItem="uRG-h2-Hik" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dOp-5r-b5b"/>
                             <constraint firstItem="j93-Xl-MHo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e4R-gb-D82"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uRG-h2-Hik" secondAttribute="trailing" id="eyA-fU-vwb"/>
                             <constraint firstItem="JD4-gK-nzB" firstAttribute="top" secondItem="uRG-h2-Hik" secondAttribute="bottom" constant="30" id="i40-Jj-k3f"/>
                             <constraint firstItem="j93-Xl-MHo" firstAttribute="top" secondItem="e0O-OI-3sW" secondAttribute="bottom" constant="10" id="iew-tX-PDT"/>
                             <constraint firstItem="e0O-OI-3sW" firstAttribute="width" secondItem="j93-Xl-MHo" secondAttribute="width" id="ktK-I5-7Ad"/>
                             <constraint firstItem="uRG-h2-Hik" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qgL-Da-i34"/>
                             <constraint firstItem="e0O-OI-3sW" firstAttribute="top" secondItem="JD4-gK-nzB" secondAttribute="bottom" constant="10" id="txk-Lu-KUu"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="dOp-5r-b5b"/>
+                                <exclude reference="eyA-fU-vwb"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="demoLabel" destination="uRG-h2-Hik" id="DHi-tY-G0P"/>
