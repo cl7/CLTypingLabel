@@ -21,7 +21,17 @@ class ViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
     
-        demoLabel.text = "This is a demo of a typing label animation..."
+        // Text
+        // demoLabel.text = "This is a demo of a typing label animation..."
+        
+        // Attributed Text
+        let attr = [
+            NSForegroundColorAttributeName: UIColor.blackColor(),
+            NSStrokeColorAttributeName: UIColor.redColor(),
+            NSStrokeWidthAttributeName: -3,
+        ]
+        
+        demoLabel.attributedText = NSAttributedString(string: "This is a demo of an attributed text typing label animation...", attributes: attr)
     }
 
     @IBAction func stopTapped(sender: AnyObject) {
