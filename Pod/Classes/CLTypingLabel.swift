@@ -145,7 +145,7 @@ enum CLTypingLabelKind {
         }
         
         let dispatchedTypingID = currentTypingID
-
+        
         dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INTERACTIVE, 0)) {
             for (index, char) in typedAttributedText.string.characters.enumerate() {
                 guard self.currentTypingID == dispatchedTypingID else {

@@ -10,18 +10,18 @@ import UIKit
 import CLTypingLabel
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var demoLabel: CLTypingLabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         demoLabel.charInterval = 0.1
     }
-
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         // Set Text
-         demoLabel.text = "This is a demo of a typing label animation..."
+        demoLabel.text = "This is a demo of a typing label animation..."
         
     }
     
@@ -36,18 +36,18 @@ class ViewController: UIViewController {
     
     @IBAction func restartTapped(sender: AnyObject) {
         if( showNoramlText)
-        //Plain Text Sample
+            //Plain Text Sample
         {
-        demoLabel.text = "This is a demo of a typing label animation..."
+            demoLabel.text = "This is a demo of a typing label animation..."
         }
         else
         {
-        //Attributed Text Sample
+            //Attributed Text Sample
             let attr = [
                 NSForegroundColorAttributeName: UIColor.blackColor(),
                 NSStrokeColorAttributeName: UIColor.greenColor(),
                 NSStrokeWidthAttributeName: -3,
-            ]
+                ]
             demoLabel.attributedText = NSAttributedString(string: "This is an attributed text typing animation...", attributes: attr)
         }
         showNoramlText = !showNoramlText
