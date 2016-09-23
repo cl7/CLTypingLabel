@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8644D3F9E8DBDE77032E5932FBB7A488"
-               BuildableName = "CLTypingLabel.framework"
-               BlueprintName = "CLTypingLabel"
+               BlueprintIdentifier = "57A9E90CD4410D80B57FF952DE556D1A"
+               BuildableName = "CLTypingLabel.bundle"
+               BlueprintName = "CLTypingLabel-CLTypingLabel"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8644D3F9E8DBDE77032E5932FBB7A488"
-            BuildableName = "CLTypingLabel.framework"
-            BlueprintName = "CLTypingLabel"
+            BlueprintIdentifier = "57A9E90CD4410D80B57FF952DE556D1A"
+            BuildableName = "CLTypingLabel.bundle"
+            BlueprintName = "CLTypingLabel-CLTypingLabel"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -60,6 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "57A9E90CD4410D80B57FF952DE556D1A"
+            BuildableName = "CLTypingLabel.bundle"
+            BlueprintName = "CLTypingLabel-CLTypingLabel"
+            ReferencedContainer = "container:Pods.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

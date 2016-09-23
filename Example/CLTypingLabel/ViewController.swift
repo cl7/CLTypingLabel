@@ -18,23 +18,23 @@ class ViewController: UIViewController {
         demoLabel.charInterval = 0.1
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         // Set Text
         demoLabel.text = "This is a demo of a typing label animation..."
         
     }
     
-    @IBAction func stopTapped(sender: AnyObject) {
+    @IBAction func stopTapped(_ sender: AnyObject) {
         demoLabel.pauseTyping()
     }
-    @IBAction func continueTapped(sender: AnyObject) {
+    @IBAction func continueTapped(_ sender: AnyObject) {
         demoLabel.continueTyping()
     }
     
     var showNoramlText = false
     
-    @IBAction func restartTapped(sender: AnyObject) {
+    @IBAction func restartTapped(_ sender: AnyObject) {
         if( showNoramlText)
             //Plain Text Sample
         {
@@ -44,10 +44,10 @@ class ViewController: UIViewController {
         {
             //Attributed Text Sample
             let attr = [
-                NSForegroundColorAttributeName: UIColor.blackColor(),
-                NSStrokeColorAttributeName: UIColor.greenColor(),
+                NSForegroundColorAttributeName: UIColor.black,
+                NSStrokeColorAttributeName: UIColor.green,
                 NSStrokeWidthAttributeName: -3,
-                ]
+                ] as [String : Any]
             demoLabel.attributedText = NSAttributedString(string: "This is an attributed text typing animation...", attributes: attr)
         }
         showNoramlText = !showNoramlText

@@ -37,29 +37,29 @@ import UIKit
  */
 
 enum CLTypingLabelKind {
-    case Text
-    case AttributedText
+    case text
+    case attributedText
 }
 
-@IBDesignable public class CLTypingLabel: UILabel {
+@IBDesignable open class CLTypingLabel: UILabel {
     /*
      Set interval time between each characters
      */
-    @IBInspectable public var charInterval: Double = 0.1
+    @IBInspectable open var charInterval: Double = 0.1
     
     /*
      SizeToFit label after each character
      */
-    @IBInspectable public var centerText: Bool = true
+    @IBInspectable open var centerText: Bool = true
     
-    private var currentTypingID: Int = 0
-    private var kind: CLTypingLabelKind = .Text
-    private var typingStopped: Bool = false
-    private var typingOver: Bool = true
-    private var stoppedSubstring: String = ""
-    private var attributes: [String: AnyObject] = [:]
+    fileprivate var currentTypingID: Int = 0
+    fileprivate var kind: CLTypingLabelKind = .text
+    fileprivate var typingStopped: Bool = false
+    fileprivate var typingOver: Bool = true
+    fileprivate var stoppedSubstring: String = ""
+    fileprivate var attributes: [String: AnyObject] = [:]
     
-    override public var text: String! {
+    override open var text: String! {
         get {
             return super.text
         }
@@ -77,11 +77,11 @@ enum CLTypingLabelKind {
             let val = newValue ?? ""
             setTextWithTypingAnimation(val, charInterval, true)
             
-            kind = .Text
+            kind = .text
         }
     }
     
-    override public var attributedText: NSAttributedString! {
+    override open var attributedText: NSAttributedString! {
         get {
             return super.attributedText
         }
@@ -97,24 +97,24 @@ enum CLTypingLabelKind {
             stoppedSubstring = ""
             
             let val = newValue ?? NSAttributedString()
-            attributes = newValue.attributesAtIndex(0, effectiveRange: nil)
+            attributes = newValue.attributes(at: 0, effectiveRange: nil) as [String : AnyObject]
             setAttributedTextWithTypingAnimation(val, charInterval, true, attributes)
             
-            kind = .AttributedText
+            kind = .attributedText
         }
     }
     
     // MARK: -
     // MARK: Stop Typing Animation
     
-    public func pauseTyping() {
+    open func pauseTyping() {
         typingStopped = true
     }
     
     // MARK: -
     // MARK: Continue Typing Animation
     
-    public func continueTyping() {
+    open func continueTyping() {
         guard typingOver == false else {
             print("CLTypingLabel: Animation is already over")
             return
@@ -128,9 +128,9 @@ enum CLTypingLabelKind {
         typingStopped = false
         
         switch kind {
-        case .Text:
+        case .text:
             setTextWithTypingAnimation(stoppedSubstring, charInterval, false)
-        case .AttributedText:
+        case .attributedText:
             let stoppedAttributedText = NSAttributedString(string: self.stoppedSubstring, attributes: attributes)
             setAttributedTextWithTypingAnimation(stoppedAttributedText, charInterval, false, attributes)
         }
@@ -139,26 +139,26 @@ enum CLTypingLabelKind {
     // MARK: -
     // MARK: Set Text & Attributed Text
     
-    private func setAttributedTextWithTypingAnimation(typedAttributedText: NSAttributedString, _ charInterval: NSTimeInterval, _ initial: Bool, _ attributes: Dictionary<String, AnyObject>) {
+    fileprivate func setAttributedTextWithTypingAnimation(_ typedAttributedText: NSAttributedString, _ charInterval: TimeInterval, _ initial: Bool, _ attributes: Dictionary<String, AnyObject>) {
         if initial == true {
             super.attributedText = NSAttributedString()
         }
         
         let dispatchedTypingID = currentTypingID
         
-        dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INTERACTIVE, 0)) {
-            for (index, char) in typedAttributedText.string.characters.enumerate() {
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.userInteractive).async {
+            for (index, char) in typedAttributedText.string.characters.enumerated() {
                 guard self.currentTypingID == dispatchedTypingID else {
                     return
                 }
                 
                 guard self.typingStopped == false else {
-                    let position = typedAttributedText.string.startIndex.advancedBy(index)
-                    self.stoppedSubstring = typedAttributedText.string.substringFromIndex(position)
+                    let position = typedAttributedText.string.characters.index(typedAttributedText.string.startIndex, offsetBy: index)
+                    self.stoppedSubstring = typedAttributedText.string.substring(from: position)
                     return
                 }
                 
-                dispatch_async(dispatch_get_main_queue()) {
+                DispatchQueue.main.async {
                     super.attributedText = NSAttributedString(string: super.attributedText!.string + String(char), attributes: attributes)
                     
                     if self.centerText == true {
@@ -166,7 +166,7 @@ enum CLTypingLabelKind {
                     }
                 }
                 
-                NSThread.sleepForTimeInterval(charInterval)
+                Thread.sleep(forTimeInterval: charInterval)
             }
             
             self.typingOver = true
@@ -174,26 +174,26 @@ enum CLTypingLabelKind {
         }
     }
     
-    private func setTextWithTypingAnimation(typedText: String, _ charInterval: NSTimeInterval, _ initial: Bool) {
+    fileprivate func setTextWithTypingAnimation(_ typedText: String, _ charInterval: TimeInterval, _ initial: Bool) {
         if initial == true {
             super.text = ""
         }
         
         let dispatchedTypingID = currentTypingID
         
-        dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INTERACTIVE, 0)) {
-            for (index, char) in typedText.characters.enumerate() {
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.userInteractive).async {
+            for (index, char) in typedText.characters.enumerated() {
                 guard self.currentTypingID == dispatchedTypingID else {
                     return
                 }
                 
                 guard self.typingStopped == false else {
-                    let position = typedText.startIndex.advancedBy(index)
-                    self.stoppedSubstring = typedText.substringFromIndex(position)
+                    let position = typedText.characters.index(typedText.startIndex, offsetBy: index)
+                    self.stoppedSubstring = typedText.substring(from: position)
                     return
                 }
                 
-                dispatch_async(dispatch_get_main_queue()) {
+                DispatchQueue.main.async {
                     super.text = super.text! + String(char)
                     
                     if self.centerText == true {
@@ -201,7 +201,7 @@ enum CLTypingLabelKind {
                     }
                 }
                 
-                NSThread.sleepForTimeInterval(charInterval)
+                Thread.sleep(forTimeInterval: charInterval)
             }
             
             self.typingOver = true
