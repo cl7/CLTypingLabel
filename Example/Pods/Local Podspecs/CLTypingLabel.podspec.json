@@ -1,19 +1,19 @@
 {
   "name": "CLTypingLabel",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "summary": "UILabel with character by character typing animation in swift iOS/OSX",
   "description": "iOS/OSX UILabel with character by character typewriter like animation",
   "homepage": "https://github.com/l800891/CLTypingLabel",
   "license": "MIT",
   "authors": {
-    "Chenglin Liu": "l800891@me.com"
+    "Chenglin": "l800891@me.com"
   },
   "source": {
     "git": "https://github.com/l800891/CLTypingLabel.git",
-    "tag": "0.1.0"
+    "tag": "0.2.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
   "requires_arc": true,
   "source_files": "Pod/Classes/**/*",

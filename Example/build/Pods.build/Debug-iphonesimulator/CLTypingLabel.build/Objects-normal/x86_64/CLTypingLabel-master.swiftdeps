@@ -1,0 +1,5 @@
+version: "Apple Swift version 3.0.2 (swiftlang-800.0.63 clang-800.0.42.1)"
+options: "1ff2945c9f3b5f10cce3272cdfb2ccb4"
+build_time: [543888094, 525032000]
+inputs:
+  "/Users/Lin/Important Apps/CLTypingLabel/Pod/Classes/CLTypingLabel.swift": [543888091, 0]

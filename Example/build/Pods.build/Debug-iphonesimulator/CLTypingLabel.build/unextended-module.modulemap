@@ -1,0 +1,10 @@
+framework module CLTypingLabel {
+  umbrella header "CLTypingLabel-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module CLTypingLabel.__Swift {
+    exclude header "CLTypingLabel-Swift.h"
+}

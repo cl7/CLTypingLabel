@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "CLTypingLabel"
-  s.version          = "0.2.0"
+  s.version          = "0.2.1"
   s.summary          = "UILabel with character by character typing animation in swift iOS/OSX"
 
 # This description is used to generate tags and improve search results.
@@ -28,12 +28,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '9.0'
   s.requires_arc = true
 
-  s.source_files = 'Pod/Classes/**/*'
-  s.resource_bundles = {
-    'CLTypingLabel' => ['Pod/Assets/*.png']
-  }
+  s.source_files = 'Pod/Classes/*'
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+
 end

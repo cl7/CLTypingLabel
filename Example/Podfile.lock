@@ -1,5 +1,5 @@
 PODS:
-  - CLTypingLabel (0.1.0)
+  - CLTypingLabel (0.2.0)
 
 DEPENDENCIES:
   - CLTypingLabel (from `../`)
@@ -9,6 +9,8 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  CLTypingLabel: 0bd01771a5475374aa79b1c37ef1c09d18da079c
+  CLTypingLabel: b0b4afaa1e8d3271612fa734f18e9b5375c4bbfd
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: f27fd92046c9fe059f3d7a1c2efdf87d37823540
+
+COCOAPODS: 1.1.1

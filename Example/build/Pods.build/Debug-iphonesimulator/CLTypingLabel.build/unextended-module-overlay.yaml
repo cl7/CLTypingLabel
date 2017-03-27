@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': '/Users/Lin/Important Apps/CLTypingLabel/Example/build/Debug-iphonesimulator/CLTypingLabel.framework/Modules'
+    'contents': [{
+      'type': 'file',
+      'name': 'module.modulemap',
+      'external-contents': '/Users/Lin/Important Apps/CLTypingLabel/Example/build/Pods.build/Debug-iphonesimulator/CLTypingLabel.build/unextended-module.modulemap',
+    }]
+  }]
+}
