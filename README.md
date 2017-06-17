@@ -4,7 +4,7 @@
 
 A lightweight UILabel subclass with character by character typewriter like animation in Swift, super simple to use
 
-iOS/OSX上自带逐字打印动画效果的UILabel
+iOS上自带逐字打印动画效果的UILabel
 
 ##Installation
 
@@ -35,6 +35,11 @@ iOS/OSX上自带逐字打印动画效果的UILabel
 At runtime, set text of the label will trigger animation automatically:
 ```swift
 myTypeWriterLabel.text = "This is a demo of typing label animation..."
+
+```
+Also works on attributedText:
+```swift
+myTypeWriterLabel.attributedText = NSAttributedString(string: "This is an attributed text typing animation...", attributes: attr)
 
 ```
 You can pause the typing animation at any time:
