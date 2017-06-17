@@ -1,5 +1,4 @@
 language: objective-c 
-osx_image: xcode8
 xcode_workspace: Example/CLTypingLabel.xcworkspace
-xcode_scheme: CLTypingLabel-Example 
-xcode_sdk: iphonesimulator10.0
+xcode_scheme: CLTypingLabel-Example
+podfile: Example/Podfile 

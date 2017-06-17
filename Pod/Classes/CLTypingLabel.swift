@@ -36,10 +36,6 @@ import UIKit
  Call conitinueTyping() to continue paused animation;
  */
 
-enum CLTypingLabelKind {
-    case text
-    case attributedText
-}
 
 @IBDesignable open class CLTypingLabel: UILabel {
     /*
@@ -48,17 +44,19 @@ enum CLTypingLabelKind {
     @IBInspectable open var charInterval: Double = 0.1
     
     /*
-     SizeToFit label after each character
+     If text is always centered during typing
      */
     @IBInspectable open var centerText: Bool = true
     
-    fileprivate var currentTypingID: Int = 0
-    fileprivate var kind: CLTypingLabelKind = .text
-    fileprivate var typingStopped: Bool = false
-    fileprivate var typingOver: Bool = true
-    fileprivate var stoppedSubstring: String = ""
-    fileprivate var attributes: [String: AnyObject] = [:]
-    
+    private var typingStopped: Bool = false
+    private var typingOver: Bool = true
+    private var stoppedSubstring: String?
+    private var attributes: [String: Any]?
+    private var currentDispatchID: Int = 320
+    private let dispatchSerialQ = DispatchQueue(label: "CLTypingLableQueue")
+    /*
+     Setting the text will trigger animation automatically
+     */
     override open var text: String! {
         get {
             return super.text
@@ -69,18 +67,19 @@ enum CLTypingLabelKind {
                 charInterval = -charInterval
             }
             
-            currentTypingID += 1
+            currentDispatchID += 1
             typingStopped = false
             typingOver = false
-            stoppedSubstring = ""
+            stoppedSubstring = nil
             
-            let val = newValue ?? ""
-            setTextWithTypingAnimation(val, charInterval, true)
-            
-            kind = .text
+            attributes = nil
+            setTextWithTypingAnimation(newValue, attributes,charInterval, true, currentDispatchID)
         }
     }
     
+    /*
+     Setting attributed text will trigger animation automatically
+     */
     override open var attributedText: NSAttributedString! {
         get {
             return super.attributedText
@@ -91,16 +90,13 @@ enum CLTypingLabelKind {
                 charInterval = -charInterval
             }
             
-            currentTypingID += 1
+            currentDispatchID += 1
             typingStopped = false
             typingOver = false
-            stoppedSubstring = ""
+            stoppedSubstring = nil
             
-            let val = newValue ?? NSAttributedString()
-            attributes = newValue.attributes(at: 0, effectiveRange: nil) as [String : AnyObject]
-            setAttributedTextWithTypingAnimation(val, charInterval, true, attributes)
-            
-            kind = .attributedText
+            attributes = newValue.attributes(at: 0, effectiveRange: nil)
+            setTextWithTypingAnimation(newValue.string, attributes,charInterval, true, currentDispatchID)
         }
     }
     
@@ -108,13 +104,16 @@ enum CLTypingLabelKind {
     // MARK: Stop Typing Animation
     
     open func pauseTyping() {
-        typingStopped = true
+        if typingOver == false {
+            typingStopped = true
+        }
     }
     
     // MARK: -
     // MARK: Continue Typing Animation
     
     open func continueTyping() {
+        
         guard typingOver == false else {
             print("CLTypingLabel: Animation is already over")
             return
@@ -124,88 +123,52 @@ enum CLTypingLabelKind {
             print("CLTypingLabel: Animation is not stopped")
             return
         }
+        guard let stoppedSubstring = stoppedSubstring else {
+            return
+        }
         
         typingStopped = false
-        
-        switch kind {
-        case .text:
-            setTextWithTypingAnimation(stoppedSubstring, charInterval, false)
-        case .attributedText:
-            let stoppedAttributedText = NSAttributedString(string: self.stoppedSubstring, attributes: attributes)
-            setAttributedTextWithTypingAnimation(stoppedAttributedText, charInterval, false, attributes)
-        }
+        setTextWithTypingAnimation(stoppedSubstring, attributes ,charInterval, false, currentDispatchID)
     }
     
     // MARK: -
-    // MARK: Set Text & Attributed Text
+    // MARK: Set Text Typing Recursive Loop
     
-    fileprivate func setAttributedTextWithTypingAnimation(_ typedAttributedText: NSAttributedString, _ charInterval: TimeInterval, _ initial: Bool, _ attributes: Dictionary<String, AnyObject>) {
-        if initial == true {
-            super.attributedText = NSAttributedString()
+    private func setTextWithTypingAnimation(_ typedText: String, _ attributes: Dictionary<String, Any>?, _ charInterval: TimeInterval, _ initial: Bool, _ dispatchID: Int) {
+        
+        guard typedText.characters.count > 0 && currentDispatchID == dispatchID else {
+            typingOver = true
+            typingStopped = false
+            return
         }
         
-        let dispatchedTypingID = currentTypingID
-        
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.userInteractive).async {
-            for (index, char) in typedAttributedText.string.characters.enumerated() {
-                guard self.currentTypingID == dispatchedTypingID else {
-                    return
-                }
-                
-                guard self.typingStopped == false else {
-                    let position = typedAttributedText.string.characters.index(typedAttributedText.string.startIndex, offsetBy: index)
-                    self.stoppedSubstring = typedAttributedText.string.substring(from: position)
-                    return
-                }
-                
-                DispatchQueue.main.async {
-                    super.attributedText = NSAttributedString(string: super.attributedText!.string + String(char), attributes: attributes)
-                    
-                    if self.centerText == true {
-                        self.sizeToFit()
-                    }
-                }
-                
-                Thread.sleep(forTimeInterval: charInterval)
-            }
-            
-            self.typingOver = true
-            self.typingStopped = false
+        guard typingStopped == false else {
+            stoppedSubstring = typedText
+            return
         }
-    }
-    
-    fileprivate func setTextWithTypingAnimation(_ typedText: String, _ charInterval: TimeInterval, _ initial: Bool) {
+        
         if initial == true {
             super.text = ""
         }
         
-        let dispatchedTypingID = currentTypingID
+        let firstCharIndex = typedText.characters.index(typedText.startIndex, offsetBy: 1)
         
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.userInteractive).async {
-            for (index, char) in typedText.characters.enumerated() {
-                guard self.currentTypingID == dispatchedTypingID else {
-                    return
-                }
-                
-                guard self.typingStopped == false else {
-                    let position = typedText.characters.index(typedText.startIndex, offsetBy: index)
-                    self.stoppedSubstring = typedText.substring(from: position)
-                    return
-                }
-                
-                DispatchQueue.main.async {
-                    super.text = super.text! + String(char)
-                    
-                    if self.centerText == true {
-                        self.sizeToFit()
-                    }
-                }
-                
-                Thread.sleep(forTimeInterval: charInterval)
+        DispatchQueue.main.async {
+            if let attributes = attributes {
+                super.attributedText = NSAttributedString(string: super.attributedText!.string +  typedText.substring(to:firstCharIndex),
+                                                          attributes: attributes)
+            } else {
+                super.text = super.text! + typedText.substring(to:firstCharIndex)
             }
             
-            self.typingOver = true
-            self.typingStopped = false
+            if self.centerText == true {
+                self.sizeToFit()
+            }
+            self.dispatchSerialQ.asyncAfter(deadline: .now() + charInterval) { [weak self] in
+                let nextString = typedText.substring(from: firstCharIndex)
+                self?.setTextWithTypingAnimation(nextString, attributes, charInterval, false, dispatchID)
+            }
         }
+        
     }
 }
