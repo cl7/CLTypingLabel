@@ -47,31 +47,31 @@
 /* Begin PBXFileReference section */
 		0154A823DF1B212849B8F2849378261B /* Pods-CLTypingLabel_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CLTypingLabel_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		0A42FFEFB4F0A4751F8244A61D261BAD /* Pods-CLTypingLabel_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CLTypingLabel_Example-umbrella.h"; sourceTree = "<group>"; };
-		193FDA08CB50C4B85CEF343EE9ADA618 /* CLTypingLabel.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = CLTypingLabel.bundle; path = CLTypingLabel.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		1EAD51AB0E4229160D5F2D95ADBBFF0D /* Pods_CLTypingLabel_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CLTypingLabel_Example.framework; path = "Pods-CLTypingLabel_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		193FDA08CB50C4B85CEF343EE9ADA618 /* CLTypingLabel.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CLTypingLabel.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EAD51AB0E4229160D5F2D95ADBBFF0D /* Pods_CLTypingLabel_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CLTypingLabel_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		28222E9851FC06388478CCAE066DB2AB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28FF6DD80019AD59C40DB4E3B6562D0B /* CLTypingLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CLTypingLabel-prefix.pch"; sourceTree = "<group>"; };
 		303DA83B6D542C791C3DBAB277CCA8EB /* Pods-CLTypingLabel_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CLTypingLabel_Example-resources.sh"; sourceTree = "<group>"; };
 		31602628E408AB5364FF3DDBC7DB94D2 /* Pods-CLTypingLabel_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CLTypingLabel_Example.release.xcconfig"; sourceTree = "<group>"; };
-		3463B118BC0445C3848B3FCBDF713030 /* CLTypingLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CLTypingLabel.framework; path = CLTypingLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3463B118BC0445C3848B3FCBDF713030 /* CLTypingLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CLTypingLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38EF81849D5AC1B29DAD0E8FB2005216 /* Pods-CLTypingLabel_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CLTypingLabel_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		3CF2AE9C0DB5914F5234F0FEB9795FF8 /* Pods-CLTypingLabel_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CLTypingLabel_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		45B68372FA611BAEC984FF6E9B9DD407 /* CLTypingLabel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CLTypingLabel-umbrella.h"; sourceTree = "<group>"; };
-		54596634503CE07737222E37CDC47B1C /* Pods-CLTypingLabel_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CLTypingLabel_Tests.modulemap"; sourceTree = "<group>"; };
+		54596634503CE07737222E37CDC47B1C /* Pods-CLTypingLabel_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CLTypingLabel_Tests.modulemap"; sourceTree = "<group>"; };
 		6B1681463898EACE05F9E0F6ABEF0DE9 /* Pods-CLTypingLabel_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CLTypingLabel_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		7485A0DB3ED77F6EEAA0D126B9119348 /* CLTypingLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CLTypingLabel-dummy.m"; sourceTree = "<group>"; };
 		89BEF3F5B1A28550C444F82E1BFF0990 /* Pods-CLTypingLabel_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CLTypingLabel_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A3AFD149E9B8FD78985F2EEB585D1413 /* CLTypingLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CLTypingLabel.swift; sourceTree = "<group>"; };
 		A59BE36950CF39FEA9ED0F15D491994B /* Pods-CLTypingLabel_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CLTypingLabel_Example-frameworks.sh"; sourceTree = "<group>"; };
 		A83196D2C7B846255D87BE55F97EEC63 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A9962E66B6B56C0CF68804E3D67B1D5B /* Pods_CLTypingLabel_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CLTypingLabel_Tests.framework; path = "Pods-CLTypingLabel_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9962E66B6B56C0CF68804E3D67B1D5B /* Pods_CLTypingLabel_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CLTypingLabel_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1B1AD27EF4E21E0BD1F86B315B61A5D /* Pods-CLTypingLabel_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CLTypingLabel_Tests-resources.sh"; sourceTree = "<group>"; };
-		C56F1EED0C19858F09AE58F23B5BAF6D /* CLTypingLabel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = CLTypingLabel.modulemap; sourceTree = "<group>"; };
+		C56F1EED0C19858F09AE58F23B5BAF6D /* CLTypingLabel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = CLTypingLabel.modulemap; sourceTree = "<group>"; };
 		C7322A9D9E69890EE01DE0D9A64987E8 /* Pods-CLTypingLabel_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CLTypingLabel_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D187540C4337536A9E313C4337C2C28E /* ResourceBundle-CLTypingLabel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-CLTypingLabel-Info.plist"; sourceTree = "<group>"; };
-		D68F67FC65EC6C31507CEDB975CF4717 /* Pods-CLTypingLabel_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CLTypingLabel_Example.modulemap"; sourceTree = "<group>"; };
+		D68F67FC65EC6C31507CEDB975CF4717 /* Pods-CLTypingLabel_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CLTypingLabel_Example.modulemap"; sourceTree = "<group>"; };
 		D805634DBD5F4CFED0445569D8C844A7 /* CLTypingLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CLTypingLabel.xcconfig; sourceTree = "<group>"; };
 		E95AAD36F39CC6D4CFA7DB146C07C47A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBF34E89CA88C919D3A86895D382BD49 /* Pods-CLTypingLabel_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CLTypingLabel_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -158,7 +158,6 @@
 			children = (
 				9CE5D31EEF5FF84D728D8FF6941BC525 /* Classes */,
 			);
-			name = Pod;
 			path = Pod;
 			sourceTree = "<group>";
 		};
@@ -197,7 +196,6 @@
 			children = (
 				A3AFD149E9B8FD78985F2EEB585D1413 /* CLTypingLabel.swift */,
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -613,7 +611,7 @@
 				PRODUCT_NAME = CLTypingLabel;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -703,7 +701,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";

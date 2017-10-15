@@ -44,10 +44,10 @@ class ViewController: UIViewController {
         {
             //Attributed Text Sample
             let attr = [
-                NSForegroundColorAttributeName: UIColor.black,
-                NSStrokeColorAttributeName: UIColor.green,
-                NSStrokeWidthAttributeName: -3,
-                ] as [String : Any]
+                NSAttributedStringKey.foregroundColor: UIColor.black,
+                NSAttributedStringKey.strokeColor: UIColor.green,
+                NSAttributedStringKey.strokeWidth: -3
+                ] as [NSAttributedStringKey : Any]
             demoLabel.attributedText = NSAttributedString(string: "This is an attributed text typing animation...", attributes: attr)
         }
         showNoramlText = !showNoramlText
