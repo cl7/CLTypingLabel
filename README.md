@@ -1,4 +1,4 @@
-# CLTypingLabel [![Build Status](https://travis-ci.org/l800891/CLTypingLabel.svg?branch=travisSetup)](https://travis-ci.org/l800891/CLTypingLabel) ![Language](https://img.shields.io/badge/iOS-Swift4-orange.svg)
+# CLTypingLabel ![Language](https://img.shields.io/badge/iOS-Swift4-orange.svg) [![Build Status](https://travis-ci.org/l800891/CLTypingLabel.svg?branch=travisSetup)](https://travis-ci.org/l800891/CLTypingLabel) 
 
 <img src="https://raw.githubusercontent.com/l800891/CLTypingLabel/master/Assets/demogiff.gif" width=320>
 
