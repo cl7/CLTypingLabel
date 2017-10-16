@@ -18,11 +18,11 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!  
   s.description      = "iOS/OSX UILabel with character by character typewriter like animation"
 
-  s.homepage         = "https://github.com/l800891/CLTypingLabel"
+  s.homepage         = "https://github.com/cl7/CLTypingLabel"
   # s.screenshots     = "https://raw.githubusercontent.com/l800891/CLTypingLabel/master/Files/demogiff.gif"
   s.license          = 'MIT'
   s.author           = { "Chenglin" => "l800891@me.com" }
-  s.source           = { :git => "https://github.com/l800891/CLTypingLabel.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/cl7/CLTypingLabel.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '9.0'
