@@ -22,7 +22,18 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
         // Set Text
         demoLabel.text = "This is a demo of a typing label animation..."
-        
+        demoLabel.onTypingAnimationFinished = { [unowned self] in
+            self.showSampleAlert()
+        }
+    }
+
+    fileprivate func showSampleAlert() {
+        let sampleAlert = UIAlertController(title: "Sample",
+                                            message: "Typing animation finished!",
+                                            preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        sampleAlert.addAction(okAction)
+        self.present(sampleAlert, animated: true, completion: nil)
     }
     
     @IBAction func stopTapped(_ sender: AnyObject) {
