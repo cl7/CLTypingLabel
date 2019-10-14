@@ -46,22 +46,21 @@ class ViewController: UIViewController {
     var showNoramlText = false
     
     @IBAction func restartTapped(_ sender: AnyObject) {
-        if( showNoramlText)
-            //Plain Text Sample
-        {
+//        if( showNoramlText)
+//            //Plain Text Sample
+//        {
             demoLabel.text = "This is a demo of a typing label animation..."
-        }
-        else
-        {
-            //Attributed Text Sample
-            let attr = [
-                NSAttributedStringKey.foregroundColor: UIColor.black,
-                NSAttributedStringKey.strokeColor: UIColor.green,
-                NSAttributedStringKey.strokeWidth: -3
-                ] as [NSAttributedStringKey : Any]
-            demoLabel.attributedText = NSAttributedString(string: "This is an attributed text typing animation...", attributes: attr)
-        }
-        showNoramlText = !showNoramlText
+//        }
+//        else
+//        {
+//            //Attributed Text Sample
+//            let attr = [
+//                NSAttributedString.Key.foregroundColor: UIColor.black,
+//                NSAttributedString.Key.strokeColor: UIColor.green
+//                ] as [NSAttributedString.Key : Any]
+//            demoLabel.attributedText = NSAttributedString(string: "This is an attributed text typing animation...", attributes: attr)
+//        }
+//        showNoramlText = !showNoramlText
     }
 }
 
