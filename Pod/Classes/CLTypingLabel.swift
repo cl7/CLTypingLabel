@@ -33,7 +33,7 @@ import UIKit
  
  Call pauseTyping() to pause animation;
  
- Call conitinueTyping() to continue paused animation;
+ Call continueTyping() to restart a paused animation;
  */
 
 
