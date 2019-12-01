@@ -24,7 +24,7 @@ iOS上自带逐字打印动画效果的UILabel
 1. Change the class of a label from UILabel to CLTypingLabel;
 
  <img src="https://raw.githubusercontent.com/l800891/CLTypingLabel/master/Assets/UILabelShot.png" width=200>
-2. Programmatically set a new String to its text property at runtime, animation would be triggered automatically;
+2. Programmatically set the .text property of your CLTypingLabel to a new String. The animation will be triggered automatically.
 
 
 ## Sample Code
