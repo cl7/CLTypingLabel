@@ -49,6 +49,11 @@ import UIKit
     open var onTypingAnimationFinished: (() -> Void)?
     
     /*
+     Optional handler which fires after each letter is typed
+     */
+    open var onLetterTyped: (() -> Void)?
+    
+    /*
      If text is always centered during typing
      */
     @IBInspectable open var centerText: Bool = true
@@ -174,6 +179,10 @@ import UIKit
             }
             self.dispatchSerialQ.asyncAfter(deadline: .now() + charInterval) { [weak self] in
                 let nextString = String(typedText[firstCharIndex...])
+
+                if let nonNilBlock = self?.onLetterTyped {
+                    DispatchQueue.main.async(execute: nonNilBlock)
+                }
                 
                 self?.setTextWithTypingAnimation(nextString, attributes, charInterval, false, dispatchID)
             }

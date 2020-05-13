@@ -43,6 +43,12 @@ myTypeWriterLabel.onTypingAnimationFinished = {
 	//code goes here
 }
 ```
+Or you can also trigger what you need after each letter is typed:
+```swift
+myTypeWriterLabel.onLetterTyped = {
+	//code goes here
+}
+```
 Also works on attributedText:
 ```swift
 myTypeWriterLabel.attributedText = NSAttributedString(string: "This is an attributed text typing animation...", attributes: attr)
